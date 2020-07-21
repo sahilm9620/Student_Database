@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/loginback"
+    tools:context=".RegisterPage">
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="STUDENT DATABASE"
+        android:textColor="#0E0E0E"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        >
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="10">
+            <com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_rollno"
+                    android:layout_width="370dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:layout_weight="10"
+
+                    android:background="#415C3E3E"
+                    android:drawableStart="@drawable/roll_no"
+                    android:ems="10"
+
+                    android:hint="  Enter Roll No"
+                    android:inputType="phone"
+                    android:textColor="#000"
+                    android:textColorHint="#9C8585" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="10">
+            <com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_weight="10"
+                android:id="@+id/edt_name"
+                android:layout_width="370dp"
+                android:layout_height="50dp"
+
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:background="#415C3E3E"
+                android:drawableStart="@drawable/username"
+                android:ems="10"
+                android:hint="  Enter Your Name"
+                android:inputType="textEmailAddress"
+                android:textColor="#000"
+                android:textColorHint="#9C8585"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="10">
+            <com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputEditText
+
+                android:layout_weight="10"
+                android:id="@+id/edt_email"
+                android:layout_width="370dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:background="#415C3E3E"
+                android:drawableStart="@drawable/username"
+                android:ems="10"
+
+                android:hint="  Enter Email Address"
+                android:inputType="textEmailAddress"
+                android:textColor="#000"
+                android:textColorHint="#9C8585" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="10">
+            <com.google.android.material.textfield.TextInputLayout
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="#F5F2F8">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_weight="10"
+                android:id="@+id/edt_pass"
+                android:layout_width="370dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:ems="10"
+                android:background="#415C3E3E"
+                android:hint="  Enter Your Password"
+                android:drawableStart="@drawable/password"
+                android:inputType="textPassword"
+                android:textColor="#000"
+                android:textColorHint="#9C8585" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="10">
+            <com.google.android.material.textfield.TextInputLayout
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="#F5F2F8">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_weight="10"
+                android:id="@+id/edt_confpass"
+                android:layout_width="370dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:ems="10"
+                android:background="#415C3E3E"
+                android:hint=" Conform Password"
+                android:drawableStart="@drawable/password"
+                android:inputType="textPassword"
+
+                android:textColorHint="#9C8585" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:weightSum="10">
+
+            <Button
+                android:id="@+id/btn_register"
+                android:layout_width="277dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="2"
+                android:onClick="register_ac"
+                android:background="@drawable/btn_back"
+                android:text="Register"
+                tools:ignore="OnClick" />
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="20">
+
+            <TextView
+                android:id="@+id/txv_register"
+                android:layout_width="315dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColorLink="#FA2727"
+                android:onClick="reg_to_login"
+                android:text="Already Registred ? Login here"
+
+                android:textColor="#FFFFFF" />
+
+
+
+
+        </TableRow>
+    </TableLayout>
+
+
+
+</LinearLayout>
