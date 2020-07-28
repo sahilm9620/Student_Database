@@ -2,10 +2,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
     android:orientation="vertical"
-    android:background="@drawable/loginback"
-    android:padding="40dp">
+    android:background="@drawable/loginback">
 
     <TextView
         android:id="@+id/welcome"
@@ -29,127 +29,176 @@
         android:textSize="20dp"
         android:text="@string/app_name" />
 
-    <GridLayout
-        android:background="#415C3E3E"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:columnCount="2"
-        android:orientation="horizontal"
-        android:rowCount="3"
-        >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#000"
-            android:text="roll_no" />
-
-        <EditText
-            android:id="@+id/editRollno"
-            android:layout_width="150dp"
-            android:layout_height="40dp"
-            android:textColor="#000"
-            android:hint="roll no"
-            android:textColorHint="#000"
-            android:inputType="number" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#000"
-            android:text="name" />
-
-        <EditText
-            android:id="@+id/editName"
-            android:layout_width="150dp"
-            android:textColor="#000"
-            android:textColorHint="#000"
-            android:layout_height="40dp"
-            android:hint="name"
-            android:inputType="text" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:textColor="#000"
-            android:layout_height="wrap_content"
-            android:text="Email" />
-
-        <EditText
-            android:id="@+id/editemail"
-            android:layout_width="150dp"
-            android:layout_height="40dp"
-            android:textColor="#000"
-            android:textColorHint="#000"
-            android:hint="Email"
-            android:inputType="textEmailAddress" />
-    </GridLayout>
 
     <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        >
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center">
+            android:layout_height="wrap_content"
+            android:weightSum="10">
+            <com.google.android.material.textfield.TextInputLayout>
 
-            <Button
-                android:id="@+id/btnAdd"
-                android:layout_width="100dp"
-                android:layout_height="40dp"
-                android:layout_column="1"
-                android:background="@drawable/btn_back"
-                android:text="ADD" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtadminrollno"
+                    android:layout_width="370dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:layout_weight="10"
 
-            <Button
-                android:id="@+id/btnDelete"
-                android:layout_width="100dp"
-                android:layout_height="40dp"
-                android:layout_column="2"
-                android:background="@drawable/btn_back"
-                android:text="Delete" />
+                    android:background="#415C3E3E"
+                    android:drawableStart="@drawable/roll_no"
+                    android:ems="10"
 
-            <Button
-                android:id="@+id/btnModify"
-                android:layout_width="100dp"
-                android:layout_height="40dp"
-                android:layout_column="3"
-                android:background="@drawable/btn_back"
-                android:text="Modify" />
-
+                    android:hint="  Enter Roll No"
+                    android:inputType="phone"
+                    android:textColor="#000"
+                    android:textColorHint="#9C8585" />
+            </com.google.android.material.textfield.TextInputLayout>
         </TableRow>
-
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center">
+            android:layout_height="wrap_content"
+            android:weightSum="10">
+            <com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_weight="10"
+                    android:id="@+id/edtadminName"
+                    android:layout_width="370dp"
+                    android:layout_height="50dp"
 
-            <Button
-                android:id="@+id/btnView"
-                android:layout_width="100dp"
-                android:layout_height="40dp"
-                android:layout_column="1"
-                android:background="@drawable/btn_back"
-                android:text="View" />
-
-            <Button
-                android:id="@+id/btnViewAll"
-                android:layout_width="100dp"
-                android:layout_height="40dp"
-                android:layout_column="2"
-                android:background="@drawable/btn_back"
-                android:text="View_all" />
-
-            <Button
-                android:id="@+id/btnShowInfo"
-                android:layout_width="100dp"
-                android:layout_height="40dp"
-                android:background="@drawable/btn_back"
-                android:layout_column="3"
-                android:text="Info" />
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="#415C3E3E"
+                    android:drawableStart="@drawable/username"
+                    android:ems="10"
+                    android:hint="  Enter Your Name"
+                    android:inputType="textEmailAddress"
+                    android:textColor="#000"
+                    android:textColorHint="#9C8585"/>
+            </com.google.android.material.textfield.TextInputLayout>
         </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="10">
+            <com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputEditText
+
+                    android:layout_weight="10"
+                    android:id="@+id/edtadminemail"
+                    android:layout_width="370dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="#415C3E3E"
+                    android:drawableStart="@drawable/username"
+                    android:ems="10"
+
+                    android:hint="  Enter Email Address"
+                    android:inputType="textEmailAddress"
+                    android:textColor="#000"
+                    android:textColorHint="#9C8585" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="10">
+            <com.google.android.material.textfield.TextInputLayout
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="#F5F2F8">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_weight="10"
+                    android:id="@+id/edtadminpass"
+                    android:layout_width="370dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:ems="10"
+                    android:background="#415C3E3E"
+                    android:hint="  Enter Your Password"
+                    android:drawableStart="@drawable/password"
+                    android:inputType="textPassword"
+                    android:textColor="#000"
+                    android:textColorHint="#9C8585" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </TableRow>
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btnAdd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_column="1"
+                    android:background="@drawable/btn_back"
+                    android:text="ADD" />
+
+                <Button
+                    android:id="@+id/btnDelete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_column="2"
+                    android:background="@drawable/btn_back"
+                    android:text="Delete" />
+
+                <Button
+                    android:id="@+id/btnModify"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_column="3"
+                    android:background="@drawable/btn_back"
+                    android:text="Modify" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btnView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_column="1"
+                    android:background="@drawable/btn_back"
+                    android:text="View" />
+
+                <Button
+                    android:id="@+id/btnViewAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_column="2"
+                    android:background="@drawable/btn_back"
+                    android:text="View_all" />
+
+                <Button
+                    android:id="@+id/btnShowInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:background="@drawable/btn_back"
+                    android:layout_column="3"
+                    android:text="Info" />
+            </TableRow>
+        </TableLayout>
+
+
+
     </TableLayout>
+
 
 
 </LinearLayout>
